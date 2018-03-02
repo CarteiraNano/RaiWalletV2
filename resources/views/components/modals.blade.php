@@ -11,36 +11,36 @@
                     <form role="form" class="form-register" method="post">
                         <div class="form-group">
                             <label for="mail">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu email aqui" required>
                         </div>
                         <div class="form-group">
-                            <label for="psw">Password</label>
-                            <input type="password" class="form-control" id="psw" placeholder="Enter password">
+                            <label for="psw">Senha</label>
+                            <input type="password" class="form-control" id="psw" placeholder="Digite sua senha">
                         </div>
                         <div class="form-group">
-                            <label for="psw">Repeat your password</label>
-                            <input type="password" class="form-control" id="psw2" placeholder="Enter password">
+                            <label for="psw">Repita sua Senha</label>
+                            <input type="password" class="form-control" id="psw2" placeholder="Repita sua senha">
                         </div>
                         <input type="submit" class="btn btn-primary btn-block" value="Sign Up">
                     </form>
                 </div>
                 <div class="modal-body registered" style="padding:40px 50px; display:none">
                     <h3>
-                        Wallet registration successful!
+                        Carteira registrada com sucesso!
                     </h3>
                     <p class="text-center">
                         <h4>
-                            Identifier
+                            Identificador
                         </h4>
                         <code id="wallet_id_reg"></code>
                     </p>
                     <p class="text-left">
-                        This is your wallet identifier. You need it to login to your wallet. It can be replaced with an alias to make it
-                        easier to remember from the wallet settings page. If you lose it, it can be recovered if you have access to the email
-                        address you have registered with. The wallet under this identifier is stored at our servers encrypted with your password,
-                        the one you used to register. If you forget that password you won't be able to decrypt your wallet and as we don't know your password
-                        we won't be able to recover it either. <strong>But</strong> there is another security measure you can take. 
-                        This is your wallet's seed:
+                        Este é o seu identificador de carteira. Você precisa que ele faça o login na sua carteira. Pode ser substituído por um apelido para torná-lo
+                        mais fácil de lembrar da página de configurações da carteira. Se você perder, pode ser recuperado se você tiver acesso ao e-mail
+                        com o qual você se registrou. A carteira sob este identificador é armazenada em nossos servidores criptografados com sua senha,
+                        a que você usou no cadastro. Se você esquecer essa senha, não poderá descriptografar sua carteira e, como não sabemos sua senha
+                        não poderemos recuperá-la. <strong>Mas</strong> há outra medida de segurança que você pode tomar.
+                        Essa é a Seed da sua Carteira:
                     </p>
                     <p class="text-center">
                         <h4>
@@ -49,19 +49,19 @@
                         <code id="wallet_seed_reg"></code>
                     </p>
                     <p class="text-left">
-                        Back up this seed somewhere safe. Anyone who knows it is able to generate all your private keys, thus having access to your
-                        funds. So if you forget your password but you have the seed you can recover your funds.
+                        Faça backup da seed em algum lugar seguro. Quem tiver acesso a ela é capaz de gerar todas as suas chaves privadas, tendo acesso ao
+                        seu dinheiro. Então, se você esquecer sua senha, mas tiver a seed, você pode recuperar seu dinheiro.
                     </p>
                     <div class="form-group">
                         <button type="button" class="btn btn-primary form-control gotowallet">
-                            Go to your wallet
+                            Ir para a minha carteira
                         </button>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <p class="text-center">
-                    Already registered? <a href="#" class="login">Login</a><br/>
-                    Already have a Nano wallet? <a href="#" class="import">Import your wallet with your seed</a></p>
+                    Já se cadastrou? <a href="#" class="login">Login</a><br/>
+                    Já tem uma Carteira Nano? <a href="#" class="import">Importe sua carteira com sua seed</a></p>
                 </div>
             </div>
         </div>
@@ -79,16 +79,16 @@
                     <form role="form" class="form-login" method="post">
                         <div class="form-group">
                             <div class="alert alert-info">
-                                <p>You can use the same credentials you used at raiwallet.com. Make sure you are logging in to https://nanowallet.io</p>
+                                <p>Você NÃO pode usar a mesma carteira do NanoWallet.io</p>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="wid">Wallet Identifier <a href="#" id="lost_id">Lost your identifier?</a></label>
+                            <label for="wid">Identificador da Carteira <a href="#" id="lost_id">Perdeu seu identificador?</a></label>
                             <input type="text" name="wallet_id" id="wid" class="form-control" placeholder="e.g.: id_33f52770e537dbae2fe307bdc4ccd4de262c705e3b565f67b37754ad46f8525f" required />
                         </div>
                         <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" name="pass" id="password" class="form-control" placeholder="Enter your password" required />
+                            <label for="password">Senha</label>
+                            <input type="password" name="pass" id="password" class="form-control" placeholder="Digite sua senha" required />
                         </div>
                         <div class="form-group" style="display:none" id="_2fa_input">
                             <label for="2fa">Google Authenticator</label>
@@ -101,8 +101,8 @@
                 </div>
                 <div class="modal-footer">
                     <p class="text-center">
-                        Not a member? <a href="#" class="signup">Sign Up</a><br/>
-                        Did you lose your password? <a href="#" class="import">Recover your wallet with your seed</a>
+                        Não é cadastrado? <a href="#" class="signup">Cadastre-se aqui</a><br/>
+                        Perdeu sua senha? <a href="#" class="import">Recupere sua carteira com a seed</a>
                     </p>
                 </div>
             </div>
@@ -115,13 +115,13 @@
             <div class="modal-content">
                 <div class="modal-header bg-primary" style="padding:35px 50px;">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4><span class="glyphicon glyphicon-lock"></span> Recover your identifier</h4>
+                    <h4><span class="glyphicon glyphicon-lock"></span> Recupere seu identificador</h4>
                 </div>
                 <div class="modal-body" style="padding:40px 50px;">
                     <form role="form" class="form-recovery" method="post">
                         <div class="form-group">
-                            <label for="wid">Email Address</label>
-                            <input type="text" name="email" id="r_email" class="form-control" placeholder="e.g.: john@doe.com" required />
+                            <label for="wid">EEndereço de Email</label>
+                            <input type="text" name="email" id="r_email" class="form-control" placeholder="exemplo: satoshi@nakamoto.com" required />
                         </div>
                         <div class="form-group">
                             <input type="submit" name="recover_id" class="btn btn-primary btn-block" value="Recover"/>
@@ -129,7 +129,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <p class="text-center">Not a member? <a href="#" class="signup">Sign Up</a></p>
+                    <p class="text-center">Não é cadastrado? <a href="#" class="signup">Cadastre-se aqui</a></p>
                 </div>
             </div>
         </div>
@@ -141,12 +141,12 @@
             <div class="modal-content">
                 <div class="modal-header bg-primary" style="padding:35px 50px;">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4><span class="glyphicon glyphicon-lock"></span> Wallet from Seed</h4>
+                    <h4><span class="glyphicon glyphicon-lock"></span> Carteira da Seed</h4>
                 </div>
                 <div class="modal-body importing" style="padding:40px 50px;">
                     <div class="form-group">
                         <div class="alert alert-danger">
-                            <p>Please take into consideration that all prior wallet addresses generated from the seed will have to be <b>regenerated manually</b> once logged in.</p>
+                            <p>Leve em conta que todos os endereços de carteira anteriores gerados a partir da seed terão que ser <b>gerados manualmente</b>, novamente, após fazer login.</p>
                         </div>
                     </div>
                     <form role="form" class="form-import" method="post">
@@ -155,15 +155,15 @@
                             <input type="email" name="i_email" class="form-control" id="email-import" placeholder="e.g.: john@doe.com" />
                         </div>
                         <div class="form-group">
-                            <label for="wid">Enter your seed</label>
+                            <label for="wid">Coloque sua Seed</label>
                             <input type="text" name="seed" id="i_seed" class="form-control" placeholder="e.g.: CD92CFF974A3E3773909BBCF053970B12C9D4A09F320F792814B6F0EB2DDA3AD" required />
                         </div>
                         <div class="form-group">
-                            <label for="password">Enter a password to encrypt your wallet</label>
+                            <label for="password">Digite uma senha para criptografar sua carteira</label>
                             <input type="password" name="psw1" id="import_psw1" class="form-control" />
                         </div>
                         <div class="form-group">
-                            <label for="password2">Repeat your password</label>
+                            <label for="password2">Repita sua senha</label>
                             <input type="password" name="psw2" id="import_psw2" class="form-control" />
                         </div>
                         <div class="form-group">
@@ -173,21 +173,21 @@
                 </div>
                 <div class="modal-body imported" style="padding:40px 50px; display:none">
                     <h3>
-                        Wallet registration successful!
+                        Carteira registrada com sucesso!
                     </h3>
                     <p class="text-center">
                         <h4>
-                            Identifier
+                            Identificador
                         </h4>
                         <code id="wallet_id_import"></code>
                     </p>
                     <p class="text-left">
-                        This is your wallet identifier. You need it to login to your wallet. It can be replaced with an alias to make it
-                        easier to remember from the wallet settings page. If you lose it, it can be recovered if you have access to the email
-                        address you have registered with. The wallet under this identifier is stored at our servers encrypted with your password,
-                        the one you used to register. If you forget that password you won't be able to decrypt your wallet and as we don't know your password
-                        we won't be able to recover it either. <strong>But</strong> there is another security measure you can take. 
-                        This is your wallet's seed:
+                        Este é o seu identificador de carteira. Você precisa que ele faça o login na sua carteira. Pode ser substituído por um apelido para torná-lo
+                        mais fácil de lembrar da página de configurações da carteira. Se você perder, pode ser recuperado se você tiver acesso ao e-mail
+                        com o qual você se registrou. A carteira sob este identificador é armazenada em nossos servidores criptografados com sua senha,
+                        a que você usou no cadastro. Se você esquecer essa senha, não poderá descriptografar sua carteira e, como não sabemos sua senha
+                        não poderemos recuperá-la. <strong>Mas</strong> há outra medida de segurança que você pode tomar.
+                        Essa é a Seed da sua Carteira:
                     </p>
                     <p class="text-center">
                         <h4>
@@ -196,17 +196,17 @@
                         <code id="wallet_seed_import"></code>
                     </p>
                     <p class="text-left">
-                        Back up this seed somewhere safe. Anyone who knows it is able to generate all your private keys, thus having access to your
-                        funds. So if you forget your password but you have the seed you can recover your funds.
+                        Faça backup da seed em algum lugar seguro. Quem tiver acesso a ela é capaz de gerar todas as suas chaves privadas, tendo acesso ao
+                        seu dinheiro. Então, se você esquecer sua senha, mas tiver a seed, você pode recuperar seu dinheiro.
                     </p>
                     <div class="form-group">
                         <button type="button" class="btn btn-primary form-control gotowallet">
-                            Go to your wallet
+                            Ir para a minha carteira
                         </button>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <p class="text-center">Don't have a wallet? <a href="#" class="signup">Sign Up</a></p>
+                    <p class="text-center">Não tem uma carteira? <a href="#" class="signup">Cadastre-se</a></p>
                 </div>
             </div>
         </div>
@@ -224,17 +224,17 @@
                 <div class="modal-body" style="padding:25px">
                     <form role="form" class="form-send">
                         <div class="form-group">
-                            <label for="wid">From</label>
+                            <label for="wid">De</label>
                             <select name="from" id="send-select" class="form-control" style="font-family:monospace">
             
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="password">To</label>
+                            <label for="password">Para</label>
                             <input type="text" name="to" id="to" class="form-control" placeholder="Receiving account" required />
                         </div>
                         <div class="form-group">
-                            <label for="amount">Amount (Nano)</label>
+                            <label for="amount">Quantidade (Nano)</label>
                             <input type="text" name="amount" id="samount" class="form-control" placeholder="e.g.: 10.5" required />
                         </div>
                         <!--
@@ -243,7 +243,7 @@
                         </div>
                         -->
                         <div class="form-group">
-                            <input type="submit" name="send" class="form-control btn btn-primary" value="Send" />
+                            <input type="submit" name="send" class="form-control btn btn-primary" value="Enviar" />
                         </div>
                     </form>
                 </div>
@@ -258,24 +258,24 @@
             <div class="modal-content">
                 <div class="modal-header bg-primary" style="padding:10px 20px;">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4><span class="glyphicon glyphicon-send"></span> Receive</h4>
+                    <h4><span class="glyphicon glyphicon-send"></span> Receber</h4>
                 </div>
                 <div class="modal-body" style="padding:25px">
                     <form role="form" class="form-receive">
                         <div class="form-group">
                             <div class="alert alert-warning">
-                                <p>Before sending funds to this wallet, please be sure the <b>Wallet Seed</b> is correctly stored in a safe location. It can be found in Security > Wallet Seed.</p>
+                                <p>Antes de enviar fundos para esta carteira, certifique-se de que a <b>Seed da Carteira</b> está corretamente armazenada em um local seguro. Pode ser encontrado em Segurança> Seed da carteira.</p>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="wid">My Accounts</label>
+                            <label for="wid">Minhas Contas</label>
                             <select name="from" id="receive-select" class="form-control" style="font-family:monospace">
             
                             </select>
                         </div>
-                        <p>Note that the amount below is only used to create the receive QR code. Any amount of NANO sent to the selected address will be credited.</p>
+                        <p>Lembre-se que o valor abaixo é usado apenas para criar o código QR de recebimento. Qualquer quantidade de NANO enviada para o endereço selecionado será creditada.</p>
                         <div class="form-group">
-                            <label for="amount">Amount (Nano)</label>
+                            <label for="amount">Quantidade (Nano)</label>
                             <input type="text" name="amount" id="receive-amount" class="form-control" placeholder="e.g.: 10.5" required />
                         </div>
                         <div class="form-group text-center" id="qr">
@@ -283,7 +283,7 @@
                             <div class="qr-bot"></div>
                         </div>
                         <div class="form-group">
-                            <input type="button" name="acc_create" id="generate_acc" class="form-control btn btn-primary" value="Generate new Account" />
+                            <input type="button" name="acc_create" id="generate_acc" class="form-control btn btn-primary" value="Gerar nova conta" />
                         </div>
                     </form>
                 </div>
@@ -298,25 +298,25 @@
             <div class="modal-content">
                 <div class="modal-header bg-primary" style="padding:10px 20px;">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4><span class="glyphicon glyphicon-send"></span> Change</h4>
+                    <h4><span class="glyphicon glyphicon-send"></span> Mudar</h4>
                 </div>
                 <div class="modal-body" style="padding:25px">
                     <form role="form" class="form-receive">
                         <p class="text-left">
-                            In Nano, representatives act as accounts that cast votes when global network consensus is required. Here, you can choose a representative to vote on your behalf. A list of representatives can be found <a href="https://raiblocks.net/page/representatives" target="_blank">here</a>.
+                            Na Nano, os representantes mantém a segurança da rede, quando necessário. Aqui, você pode escolher um representante para votar em seu nome. Pode encontrar uma lista de representantes <a href="https://raiblocks.net/page/representatives" target="_blank">aqui</a>.
                         </p>                        
                         <div class="form-group">
-                            <label for="wid">My Accounts</label>
+                            <label for="wid">Minhas Contas</label>
                             <select name="from" id="change-select" class="form-control" style="font-family:monospace">
             
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="amount">Representative</label>
+                            <label for="amount">Representante</label>
                             <input type="text" name="representative" id="acc-repr" class="form-control" placeholder="e.g.: xrb_1anrzcuwe64rwxzcco8dkhpyxpi8kd7zsjc1oeimpc3ppca4mrjtwnqposrs" />
                         </div>
                         <div class="form-group">
-                            <button type="button" name="repr_change" id="change_repr" class="form-control btn btn-primary">Change account representative</button>
+                            <button type="button" name="repr_change" id="change_repr" class="form-control btn btn-primary">Mudar o meu representante</button>
                         </div>
                     </form>
                 </div>

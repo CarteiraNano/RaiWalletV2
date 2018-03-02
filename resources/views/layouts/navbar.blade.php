@@ -3,31 +3,31 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                    <span class="sr-only">Alternar navegação</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">NanoWallet</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Carteira Nano</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#about">Sobre</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Features</a>
+                        <a class="page-scroll" href="#services">Funcionalidades</a>
+                    </li>
+<!--                    <li>
+                        <a class="page-scroll" href="resources">Recursos</a>
+                    </li> -->
+                    <li>
+                        <a class="page-scroll" href="#contact">Contato</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="resources">Resources</a>
+                        <a href="#" class="signup">Cadastro</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                    <li>
-                        <a href="#" class="signup">Sign Up</a>
-                    </li>
-                    <li>
-                        <a href="#" class="login">Sign In</a>
+                        <a href="#" class="login">Login</a>
                     </li>
                 </ul>
             </div>

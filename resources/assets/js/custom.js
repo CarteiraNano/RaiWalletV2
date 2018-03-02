@@ -47,7 +47,7 @@ $(document).ready(function(){
 	function alertError(msg)
 	{
 		$.toast({
-			heading: 'Error',
+			heading: 'Erro',
 			text: msg,
 			icon: 'error',
 			position: 'bottom-right',
@@ -59,7 +59,7 @@ $(document).ready(function(){
 	function alertSuccess(msg)
 	{
 		$.toast({
-			heading: 'Success',
+			heading: 'Sucesso',
 			text: msg,
 			icon: 'success',
 			position: 'bottom-right',
@@ -157,8 +157,8 @@ $(document).ready(function(){
                 $('.dashboard').addClass('current');
                 if(!moving)
                 {
-                    window.history.pushState("home", "NanoWallet - Home", "/home");
-                    document.title = 'NanoWallet - Home';
+                    window.history.pushState("home", "Carteira Nano - Home", "/home");
+                    document.title = 'Carteira Nano - Home';
                 }
                 active = 'home';
                 moving = false;
@@ -178,8 +178,8 @@ $(document).ready(function(){
                 $('.transactions').addClass('current');
                 if(!moving)
                 {
-                    window.history.pushState("transactions", "NanoWallet - Transactions", "/transactions");
-                    document.title = 'NanoWallet - Transactions';
+                    window.history.pushState("transactions", "Carteira Nano - Transações", "/transactions");
+                    document.title = 'Carteira Nano - Transações';
                 }
                 active = 'transactions';
                 moving = false;
@@ -199,8 +199,8 @@ $(document).ready(function(){
                 $('.security').addClass('current');
                 if(!moving)
                 {
-                    window.history.pushState("security", "NanoWallet - Security", "/security");
-                    document.title = 'NanoWallet - Security';
+                    window.history.pushState("security", "Carteira Nano - Segurança", "/security");
+                    document.title = 'Carteira Nano - Segurança';
                 }
                 active = 'security';
                 moving = false;
@@ -220,8 +220,8 @@ $(document).ready(function(){
                 $('.settings').addClass('current');
                 if(!moving)
                 {
-                    window.history.pushState("settings", "RaiWallet - Settings", "/settings");
-                    document.title = 'RaiWallet - Settings';
+                    window.history.pushState("settings", "Carteira Nano - Settings", "/settings");
+                    document.title = 'Carteira Nano - Settings';
                 }
                 active = 'settings';
                 moving = false;
@@ -241,8 +241,8 @@ $(document).ready(function(){
                 $('.debug').addClass('current');
                 if(!moving)
                 {
-                    window.history.pushState("debug", "NanoWallet - Debug", "/debug");
-                    document.title = 'NanoWallet - Debug';
+                    window.history.pushState("debug", "Carteira Nano - Debug", "/debug");
+                    document.title = 'Carteira Nano - Debug';
                 }
                 active = 'debug';
                 moving = false;
@@ -444,7 +444,7 @@ $(document).ready(function(){
 		recentEmpty = false;
 		$('.recent').append('<ul id="'+txObj.hash+'"><li><div class="row">'+
 								'<div class="col-xs-3">'+
-									'<b class="green">Received</b>'+
+									'<b class="green">Recebida</b>'+
 								'</div>'+
 								'<div class="col-xs-4"><a href="https://www.nanode.co/block/'+txObj.hash+'" target="_blank">'+txObj.hash.substring(0,20)+'....</a></div>'+
 								'<div class="col-xs-5 text-right">'+
@@ -469,7 +469,7 @@ $(document).ready(function(){
 		recentEmpty = false;
 		$('.recent').append('<ul id="'+txObj.hash+'"><li><div class="row">'+
 								'<div class="col-xs-3">'+
-									'<b class="red">Sent</b>'+
+									'<b class="red">Enviada</b>'+
 								'</div>'+
 								'<div class="col-xs-3">'+txObj.date+'</div>'+
 								'<div class="col-xs-6 text-right">'+
@@ -485,7 +485,7 @@ $(document).ready(function(){
 		recentEmpty = false;
 		$('.recent').append('<ul id="'+txObj.hash+'"><li><div class="row">'+
 								'<div class="col-xs-3">'+
-									'<b class="change">Change</b>'+
+									'<b class="change">Mudança de Representante</b>'+
 								'</div>'+
 								'<div class="col-xs-9">'+txObj.representative.substring(0,25)+' ....</div>'+
 							'</div></li></ul>');
@@ -494,7 +494,7 @@ $(document).ready(function(){
 	function emptyRecent()
 	{
 		recentEmpty = true;
-		$('.recent').append('<div class="row"><div class="col-xs-12" style="color:#888">There is nothing to show here.</div></div>');
+		$('.recent').append('<div class="row"><div class="col-xs-12" style="color:#888">Não há nada para mostrar aqui.</div></div>');
 	}
 	
 	function refreshBalances()
@@ -685,7 +685,7 @@ $(document).ready(function(){
 		$.post('/wallet/rebroadcast', 'hash='+blockHash, function(data){
 			if(data.status == 'success')
 			{
-				alertInfo('Block rebroadcasted');
+				alertInfo('Bloco retransmitido');
 			}
 			else
 			{
@@ -885,7 +885,7 @@ $(document).ready(function(){
 		if(_2fa_confirmed)
 		{
 			$('#2fa_confirm').fadeIn();
-			$('#button_2fa').html('Disable');
+			$('#button_2fa').html('Desativar');
 			$('#qr_2fa').html('');
 			$('#2fa_key').html('');
 			$('#2fa_confirm_input').val('');
@@ -895,7 +895,7 @@ $(document).ready(function(){
 		else if(_2fa_enabled)
 		{
 			$('#2fa_confirm').fadeIn();
-			$('#button_2fa').html('Confirm');
+			$('#button_2fa').html('Confirmar');
 			$('#qr_2fa').html('<img src="'+_2fa_qr_url+'" class="img-responsive" />');
 			$('#2fa_key').html("Key: "+_2fa_key);
 			$('#2fa_confirm_input').val('');
@@ -906,7 +906,7 @@ $(document).ready(function(){
 		{
 			// disabled
 			$('#2fa_confirm').fadeOut();
-			$('#button_2fa').html('Enable');
+			$('#button_2fa').html('Ativar');
 			$('#qr_2fa').html('');
 			$('#2fa_key').html('');
 			$('#2fa_confirm_input').val('');
@@ -918,7 +918,7 @@ $(document).ready(function(){
 	function goToWallet()
 	{
 		// load wallet template
-		$('.landing').html('<div class="transition-overlay"><span>NANOWALLET</span><br/><i class="fa fa-circle-o-notch fa-spin fa-fw"></i><br/> <div class="fade-in_10s" style="padding: 20px;"><p>It seems like loading your wallet is taking a while... If you are not using Chrome or Firefox, please try with these.</p></div> </div>');
+		$('.landing').html('<div class="transition-overlay"><span>Carteira Nano</span><br/><i class="fa fa-circle-o-notch fa-spin fa-fw"></i><br/> <div class="fade-in_10s" style="padding: 20px;"><p>Parece que o carregamento da carteira está demorando ... Se você não estiver usando o Chrome ou o Firefox, tente com eles.</p></div> </div>');
 		$(".modal").modal('hide');
 
 		// load elements and display wallet
@@ -951,11 +951,11 @@ $(document).ready(function(){
 				lastAction = Date.now() / 1000;
 			});
 			
-			window.history.pushState("home", "NanoWallet - Home", "/home");
-			document.title = 'NanoWallet - Home';
+			window.history.pushState("home", "Carteira Nano - Home", "/home");
+			document.title = 'Carteira Nano - Home';
 
 			window.onbeforeunload = function(e) {
-				var dialogText = 'Refreshing the page will require you to decrypt your wallet again.';
+				var dialogText = 'A atualização da página exigirá que você desencripte sua carteira novamente.';
 				e.returnValue = dialogText;
 				return dialogText;
 			};
@@ -1006,7 +1006,7 @@ $(document).ready(function(){
 		{
 			if($('#psw').val().length < 8)
 			{
-				alertError("You are going to store money, choose a stronger password :P");
+				alertError("Você vai armazenar dinheiro, escolha uma senha mais forte: P");
 				return false;
 			}
 			
@@ -1022,7 +1022,7 @@ $(document).ready(function(){
 			$.post('/wallet/register', 'email='+encodeURIComponent(email)+'&wallet='+pack+'&loginKey='+loginKey, function(data){
 				if(data.status == 'success')
 				{
-					alertInfo('Wallet successfully registered.');
+					alertInfo('Carteira registrada com sucesso!');
 					$('#wallet_id_reg').html(data.identifier);
 					$('#wallet_seed_reg').html(seed);
 					$('.registering').fadeOut(500, function(){
@@ -1039,7 +1039,7 @@ $(document).ready(function(){
 			});
 		}
 		else
-			alertError('Passwords do not match.');
+			alertError('Senahs não conferem.');
 		
 		return false;
 		
@@ -1059,7 +1059,7 @@ $(document).ready(function(){
 				{
 					$('#2fa_login_code').val('');
 					$('#_2fa_input').fadeIn();
-					alertInfo("Enter google authenticator code.");
+					alertInfo("Digite o código do google authenticator.");
 					_2fa_required = 1;
 				}
 				else
@@ -1073,7 +1073,7 @@ $(document).ready(function(){
 					try{
 						wallet.load(data.wallet);
 					}catch(e){
-						alertError('Error decrypting wallet. Check that the password is correct.');
+						alertError('Erro ao descriptografar a carteira. Verifique se a senha está correta.');
 						$('input').prop('disabled', 0);
 						console.log(e);
 						return;
@@ -1087,9 +1087,9 @@ $(document).ready(function(){
 					}
 					
 					
-					// default to server side pow always 
-					localPow = false;
-					$('#pow_checkbox').prop('checked', false);
+					// default to client side pow always 
+					localPow = true;
+					$('#pow_checkbox').prop('checked', true);
 					
 					signOutInterval = data.sign_out;
 					$('#aso_time').val(signOutInterval);
@@ -1150,14 +1150,14 @@ $(document).ready(function(){
 		// from
 		var from = functions.parseXRBAccount($('#send-select').val());
 		if(from === false)
-			return alertError('Invalid origin address');
+			return alertError('Endereço de origem inválido.');
 		
 		// check address
 		var to = $('#to').val();
 		try{
 			functions.keyFromAccount(to);
 		}catch(e){
-			alertError('Invalid NANO address.');
+			alertError('Endereço NANO inválido.');
 			$('#to').css('border-color', '#880000');
 			error = true;
 		}
@@ -1169,14 +1169,14 @@ $(document).ready(function(){
 		var amountRaw = bigInt(amountRai).multiply("1000000000000000000000000");
 		if(amount <= 0)
 		{
-			alertError('Invalid amount.');
+			alertError('Quantia inválida.');
 			$('#samount').css('border-color', '#880000');
 			error = true;
 		}
 		
 		if(amountRaw.greater(balance))
 		{
-			alertError('Amount is greater than balance in the selected account.');
+			alertError('O valor é maior do que o saldo na conta selecionada.');
 			console.log(amountRaw);
 			console.log(balance);
 			$('#samount').css('border-color', '#880000');
@@ -1191,11 +1191,11 @@ $(document).ready(function(){
 				
 				refreshBalances();
 				$(".modal").modal('hide');
-				alertInfo("Transaction built successfully. Waiting for work ...");
+				alertInfo("Transação criada com sucesso. Esperando PoW...");
 				addRecentSendToGui({date: "Just now", amount: amountRaw, hash: hash});
 				wallet.workPoolAdd(blk.getPrevious(), from, true);
 			}catch(e){
-				alertError('Ooops, something happened: ' + e.message);
+				alertError('Ooops, algo aconteceu: ' + e.message);
 			}
 				
 		}
@@ -1208,7 +1208,7 @@ $(document).ready(function(){
 		checkChains(function(){
 			refreshBalances();
 			sync();
-			alertSuccess('New account added to wallet.');
+			alertSuccess('Nova conta adicionada a carteira.');
 			wallet.useAccount(newAccount);
 			updateReceiveQr(newAccount);
 		});
@@ -1221,7 +1221,7 @@ $(document).ready(function(){
 		try{
 			functions.keyFromAccount(repr);
 		}catch(e){
-			alertError("Invalid representative account.");
+			alertError("Conta de representante inválida");
 			return;
 		}
 		
@@ -1230,10 +1230,10 @@ $(document).ready(function(){
 			sync();
 			var txObj = {representative: repr, hash: blk.getHash(true)};
 			addRecentChangeToGui(txObj);
-			alertInfo("Representative changed. Waiting for work to broadcast the block.");
+			alertInfo("Representante mudou. Esperando PoW para transmitir o bloco.");
 		}catch(e){
 			console.log(e);
-			alertError('Something happened: ' + e);
+			alertError('Algo de errado aconteceu: ' + e);
 		}
 	});
 	
@@ -1273,14 +1273,14 @@ $(document).ready(function(){
 			if(block.getType() == 'send')
 			{
 				var color = 'red';
-				var fromto = 'To: ';
+				var fromto = 'Para: ';
 				var symbol = '-';
 				var account = block.getDestination();
 			}
 			else
 			{
 				var color = 'green';
-				var fromto = 'From: ';
+				var fromto = 'De: ';
 				var symbol = '+';
 				var account = block.getOrigin();
 			}
@@ -1298,8 +1298,8 @@ $(document).ready(function(){
 							'<b>'+fromto+'</b><span class="blk-account">'+account+'</span>'+
 						'</div>'+
 						'<div class="col-sm-4 text-center">'+
-							'<button type="button" data-toggle="tooltip" data-placement="left" title="View Block" class="btn btn-default gborder" style="margin-right:5px" onclick="$(\'.txs ul\').find(\'#json_'+block.getHash(true)+'\').fadeToggle();"><i class="fa fa-angle-down" aria-hidden="true"></i></button>'+
-							'<button type="button" data-toggle="tooltip" data-placement="right" title="Rebroadcast" class="btn btn-default gborder rebroadcast" id="rebroadcast_'+block.getHash(true)+'" ><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>'+
+							'<button type="button" data-toggle="tooltip" data-placement="left" title="Ver Bloco" class="btn btn-default gborder" style="margin-right:5px" onclick="$(\'.txs ul\').find(\'#json_'+block.getHash(true)+'\').fadeToggle();"><i class="fa fa-angle-down" aria-hidden="true"></i></button>'+
+							'<button type="button" data-toggle="tooltip" data-placement="right" title="Retransmitir" class="btn btn-default gborder rebroadcast" id="rebroadcast_'+block.getHash(true)+'" ><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>'+
 						'</div>'+
 						'<div class="col-sm-12" style="display:none; margin-top:15px" id="json_'+block.getHash(true)+'">'+
 							'<pre><code>'+block.getJSONBlock(true)+'</code></pre>'+
@@ -1322,8 +1322,8 @@ $(document).ready(function(){
 							'<span class="blk-account">'+block.getRepresentative()+'</span>'+
 						'</div>'+
 						'<div class="col-sm-4 text-center">'+
-							'<button type="button" data-toggle="tooltip" data-placement="left" title="View Block" class="btn btn-default gborder" style="margin-right:5px" onclick="$(\'.txs ul\').find(\'#json_'+block.getHash(true)+'\').fadeToggle();"><i class="fa fa-angle-down" aria-hidden="true"></i></button>'+
-							'<button type="button" data-toggle="tooltip" data-placement="right" title="Rebroadcast" class="btn btn-default gborder rebroadcast" id="rebroadcast_'+block.getHash(true)+'" ><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>'+
+							'<button type="button" data-toggle="tooltip" data-placement="left" title="Ver Bloco" class="btn btn-default gborder" style="margin-right:5px" onclick="$(\'.txs ul\').find(\'#json_'+block.getHash(true)+'\').fadeToggle();"><i class="fa fa-angle-down" aria-hidden="true"></i></button>'+
+							'<button type="button" data-toggle="tooltip" data-placement="right" title="Retransmitir" class="btn btn-default gborder rebroadcast" id="rebroadcast_'+block.getHash(true)+'" ><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>'+
 						'</div>'+	
 						'<div class="col-sm-12" style="display:none; margin-top:15px" id="json_'+block.getHash(true)+'">'+
 							'<pre><code>'+block.getJSONBlock(true)+'</code></pre>'+
@@ -1346,19 +1346,19 @@ $(document).ready(function(){
 		var minimum = parseInt($('#minimum_receive').val());
 		if(minimum < 0)
 		{
-			alertError('Invalid minimum amount');
+			alertError('Quantidade mínima inválida');
 			return;
 		}
 		
 		if(wallet.setMinimumReceive(bigInt(minimum).multiply("1000000000000000000000000")))
 		{
 			sync();
-			alertInfo('Settings updated');
+			alertInfo('Configurações atualizadas');
 		}
 		else
 		{
 			$('#minimum_receive').val(wallet.getMinimumReceive().over("1000000000000000000000000"));
-			alertError('Error updating setting. Make sure you entered a valid number in rai units.');
+			alertError('Erro ao atualizar a configuração: Verifique se você digitou um número válido em unidades rai.');
 		}
 	});
 	
@@ -1428,7 +1428,7 @@ $(document).ready(function(){
 					
 					if(data.status == 'success')
 					{
-						alertInfo('Wallet successfully registered.');
+						alertInfo('Carteira registrada com sucesso!');
 						$('#wallet_id_import').html(data.identifier);
 						$('#wallet_seed_import').html(seed);
 						$('.importing').fadeOut(500, function(){
@@ -1445,10 +1445,10 @@ $(document).ready(function(){
 				});
 				
 			} else {
-				alertError('Invalid walled seed. It should be a hex encoded 32 byte string.');
+				alertError('Seed da carteira inválida. Deve ser uma string hexadecimal de 32 bytes.');
 			}
 		} else {
-			alertError('Passwords do not match');
+			alertError('Senhas não conferem');
 		}
 		
 		return false;
@@ -1461,9 +1461,9 @@ $(document).ready(function(){
 			setTimeout(function(){
 				$('#seed_backup').val($('#seed_backup').attr('value'));
 			}, 30000);
-			alertInfo('Seed will be visible for 30 seconds.');
+			alertInfo('A seed ficará visivel por 30 segundos.');
 		}catch(e){
-			alertError('Incorrect password');
+			alertError('Senha incorreta');
 		}
 	});
 	
@@ -1594,7 +1594,7 @@ $(document).ready(function(){
 	$('#download_wallet').click(function(){
 		var data = wallet.pack();
 		var link = document.createElement('a');
-		link.download = 'NanoWalletBackUp.dat';
+		link.download = 'CarteiraNanoBackup.dat';
 		var blob = new Blob([data], {type: 'text/plain'});
 		link.href = window.URL.createObjectURL(blob);
 		link.click();
@@ -1653,7 +1653,7 @@ $(document).ready(function(){
 					try{
 						wallet.load(data.wallet);
 					}catch(e){
-						alertError('Error decrypting wallet. Check that the password is correct.');
+						alertError('Erro ao descriptografar a carteira. Verifique se a senha está correta.');
 						$('input').prop('disabled', 0);
 						return;
 					}
@@ -1664,7 +1664,7 @@ $(document).ready(function(){
 					imLoggedIn(function() {	
 						checkChains(function(err) {
 							if(err) {
-								alertError('Error trying to fetch wallet balances. Try again.');
+								alertError('Erro ao tentar obter os saldos da carteira. Tente novamente.');
 								return;
 							}
 
@@ -1701,14 +1701,14 @@ $(document).ready(function(){
 		var from = functions.parseXRBAccount($('.pay-account-select').val());
 		if(!from)
 		{
-			alertError('Invalid origin address.');
+			alertError('Endereço de origem inválido.');
 			return;
 		}
 		
 		var to = functions.parseXRBAccount($('#pay_address').val());
 		if(!to)
 		{
-			alertError('Invalid destination address.');
+			alertError('Endereço de destino inválido.');
 			return;
 		}
 		
@@ -1725,7 +1725,7 @@ $(document).ready(function(){
 		
 		if(amountRaw.greater(balance))
 		{
-			alertError('Amount is greater than balance in the selected account.');
+			alertError('O valor é maior do que o saldo na conta selecionada.');
 			console.log(amountRaw);
 			console.log(balance);
 			$('.pay-account-select').css('border-color', '#880000');
@@ -1749,7 +1749,7 @@ $(document).ready(function(){
 		workAndBroadcast(blk, {sendMail: $('#email-checkbox').val()}, function(err){
 			if(err) {
 				alertError(err);
-				$('#confirm-pay').val('Confirm Payment').prop('disabled', 0);
+				$('#confirm-pay').val('Confirmar Pagamento').prop('disabled', 0);
 				return;
 			}
 			

@@ -11,7 +11,7 @@
                         <div class="row">
                             <div class="col-xs-8">
                                 <img src="apple-icon.png" class="img-responsive pay-logo" />
-                                <h3 class="logo-name">NANOWALLET</h3>
+                                <h3 class="logo-name">CARTEIRA NANO</h3>
                             </div>
                         </div>
                         <hr/>
