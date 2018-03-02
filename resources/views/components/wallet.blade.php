@@ -38,7 +38,7 @@
                         <div class="col-md-12 main-box">
                             <div class="row">
                                 <div class="col-xs-6 buttons">
-                                    <h2 style="font-weight:700">SUAS NANO, EM QUALQUER LUGAR.</h2>
+                                    <h2 style="font-weight:700">SUAS NANOS, EM QUALQUER LUGAR.</h2>
                                     <a href="#menu-toggle" class="btn btn-info" id="menu-toggle">Alternar</a>
                                     <button type="button" class="btn btn-primary" id="send">Enviar</button>
                                     <button type="button" class="btn btn-primary" id="receive">Receber</button>

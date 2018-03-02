@@ -72,7 +72,7 @@
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="service-box">
                             <i class="fa fa-4x fa-globe text-primary sr-icons"></i>
-                            <h3>Use-o em qualquer lugar</h3>
+                            <h3>Use em qualquer lugar</h3>
                             <p class="text-muted">Em casa, na rua, no celular ou no computador... faça transações NANO onde quiser!</p>
                         </div>
                     </div>
